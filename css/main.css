@@ -1,0 +1,133 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #FFE8F2;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #ffffff 0px,
+    #ffffff 40px,
+    transparent 40px,
+    transparent 140px
+  );
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background-color: #bfe6ff;
+  min-height: 70px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo img {
+  width: clamp(55px, 6vw, 70px);
+  height: auto;
+  display: block;
+}
+
+/* NAV PILL */
+.nav-pill {
+  background: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: inclusive-sans, sans-serif;
+  font-weight: 700;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f26230;
+  position: relative;
+  font-weight: 700;
+}
+
+/* UNDERLINE */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc1d6;
+  transition: height 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  height: 5px;
+}
+
+/* HERO CONTAINER */
+.hero-text {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+/* "HEY THERE" */
+.hey-there {
+  font-family: adobe-handwriting-ernie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(28px, 5vw, 65px);
+  color: #f26230;
+  margin: 0;
+}
+
+/* NAME */
+h1 {
+  font-family: dazzle-unicase, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(40px, 8vw, 100px);
+  color: #f26230;
+  margin: 0 0 6px 0;
+}
+
+/* BIO */
+.bio {
+  font-family: inclusive-sans, sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 20px);
+  color: #f26230;
+  max-width: 600px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .nav-pill {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+}
