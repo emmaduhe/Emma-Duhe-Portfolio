@@ -17,6 +17,7 @@ body {
     #ffffff 100px,
     #ffffff 200px
   );
+  background-size: 200px auto;
 }
 
 /* NAVBAR */
@@ -29,10 +30,6 @@ body {
   min-height: 70px;
   flex-wrap: wrap;
   gap: 10px;
-}
- 
-/* makes it sticky */
-.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -134,28 +131,33 @@ h3 {
 }
 
 .bio {
-    font-family: inclusive-sans, sans-serif;
-    font-size: clamp(14px, 2vw, 20px);
-    color: #f26230;
-    max-width: 600px;
-    line-height: 1.4;
-    margin: 0
+  font-family: inclusive-sans, sans-serif;
+  font-size: clamp(14px, 2vw, 20px);
+  color: #f26230;
+  max-width: 600px;
+  line-height: 1.4;
+  margin: 0;
 }
 
-/* PROJECT LAYOUT (THIS IS THE KEY FIX) */
+/* UNIVERSAL RESPONSIVE IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* PROJECT LAYOUT */
 .project {
   display: flex;
   align-items: flex-start;
   gap: 60px;
-  padding: 40px 190px;
+  padding: 40px 5%;
 }
 
-/* TEXT BLOCK */
 .text {
   flex: 1;
 }
 
-/* DESCRIPTION TEXT */
 .featured-descriptions {
   font-family: inclusive-sans, sans-serif;
   font-weight: 400;
@@ -165,20 +167,6 @@ h3 {
   line-height: 1.4;
 }
 
-/* IMAGE SIZES (kept your original intent) */
-.tiny-chef img,
-.movie-poster img {
-  width: 50%;
-  height: auto;
-  display: block;
-}
-
-.travel-poster img {
-  width: 20%;
-  height: auto;
-  display: block;
-}
-
 /* FOOTER */
 .footer {
   background-color: #bfe6ff;
@@ -186,7 +174,6 @@ h3 {
   margin-top: 80px;
 }
 
-/* layout */
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -195,7 +182,6 @@ h3 {
   gap: 20px;
 }
 
-/* LEFT SIDE NAME */
 .footer-name {
   font-family: dazzle-unicase, sans-serif;
   font-weight: 700;
@@ -205,7 +191,6 @@ h3 {
   margin: 0;
 }
 
-/* RIGHT LINKS */
 .footer-links {
   list-style: none;
   display: flex;
@@ -224,7 +209,6 @@ h3 {
   position: relative;
 }
 
-/* hover underline (matches navbar style but lighter) */
 .footer-links a::after {
   content: "";
   position: absolute;
@@ -240,53 +224,21 @@ h3 {
   height: 5px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-links {
-    gap: 12px;
-  }
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .tiny-chef img,
-  .movie-poster img,
-  .travel-poster img {
-    width: 100%;
-  }
-
-  .nav-pill {
-    padding: 10px 16px;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-}
-
-
-/* ABOUT */
+/* ABOUT SECTION */
 .emma {
   display: flex;
   align-items: center;
   gap: 40px;
-  padding: 60px 0;
+  background: white;
+  padding: 60px;
+  max-width: 1100px;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .emma-img img {
   width: 400px;
-  height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -302,46 +254,19 @@ h3 {
   margin: 0;
 }
 
-.emma-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 20px 0;
-}
-
-.bio {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.emma {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-
-  background: white;        /* the white box */
-  padding: 60px;            /* space inside the box */
-  max-width: 1100px;        /* controls how wide the box gets */
-  margin: 60px auto;        /* centers the box on the page */
-  border-radius: 20px;      /* optional, but looks clean */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* optional soft shadow */
-}
-
 .resume-pill {
   display: inline-block;
   padding: 10px 22px;
   background-color: #ffffff;
   border-radius: 999px;
-
   font-family: inclusive-sans, sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #f26230;
-
   text-decoration: none;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* hover effect */
 .resume-pill:hover {
   transform: translateY(-2px);
   background-color: #ffe8f2;
@@ -355,8 +280,9 @@ h3 {
   padding: 40px 20px;
 }
 
+/* PORTFOLIO */
 .portfolio-page {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .gallery {
@@ -373,8 +299,6 @@ h3 {
 }
 
 .gallery-item img {
-  width: 100%;
-  height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -382,23 +306,11 @@ h3 {
 .gallery-title {
   margin-top: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: inclusive-sans, sans-serif;
 }
 
-/* Tablet: 2 across */
-@media (max-width: 900px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile: 1 across */
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* Overlay */
 .gallery-img-wrapper {
   position: relative;
   width: 100%;
@@ -407,20 +319,16 @@ h3 {
 }
 
 .gallery-img-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
   transition: transform 0.3s ease;
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.742); /* 50% white */
+  background: #ffdceacd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,16 +336,15 @@ h3 {
   transition: opacity 0.3s ease;
 }
 
-/* Overlay text */
 .overlay-text {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #333;
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  padding: 20px;
+  font-family: inclusive-sans, sans-serif;
 }
 
-/* Hover effect */
 .gallery-img-wrapper:hover .overlay {
   opacity: 1;
 }
@@ -446,14 +353,7 @@ h3 {
   transform: scale(1.05);
 }
 
-.h2-portfolio {
-    font-family: dazzle-unicase, sans-serif;
-    font-size: clamp(18px, 3vw, 60px);
-    color: #f26230;
-    margin-top: 80px;
-    text-align: center;
-}
-
+/* CONTACT PAGE */
 .contact-container {
   max-width: 750px;
   margin: 80px auto;
@@ -490,7 +390,8 @@ h3 {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #333;
+  color: #f26230;
+  font-family: inclusive-sans, sans-serif;
 }
 
 .form-group input,
@@ -512,8 +413,8 @@ h3 {
 }
 
 .contact-btn {
-  background: #f26230;
-  color: white;
+  background: #fbc8d9;
+  color: #f26230;
   padding: 14px 20px;
   border: none;
   border-radius: 10px;
@@ -521,30 +422,124 @@ h3 {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  font-family: inclusive-sans, sans-serif;
 }
 
 .contact-btn:hover {
-  background: #d94f1f;
+  background: #f0a5be;
+  color: #ffffff;
 }
 
-/* ---------- RESPONSIVE CONTACT PAGE ---------- */
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
 
+/* ---------- HOMEPAGE DESKTOP + TABLET FIXES ---------- */
+
+/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (UPDATED SIZE) ---------- */
+
+/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (BIGGER IMAGES) ---------- */
+@media (min-width: 769px) {
+  .project {
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+
+  /* Larger homepage project images */
+  .project-img img {
+    width: 60%;
+    max-width: 520px;
+  }
+
+  /* Wider text block for balance */
+  .project .text {
+    flex: 2;
+    max-width: 800px;
+  }
+
+  /* Comfortable spacing between image + text */
+  .project {
+    gap: 50px;
+  }
+}
+
+/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (BIGGER IMAGES EXCEPT TRAVEL POSTER) ---------- */
+
+/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (EVEN BIGGER IMAGES) ---------- */
+
+@media (min-width: 769px) {
+
+  /* Make Tiny Chef + Movie Poster MUCH bigger */
+  .project:not(.travel-poster) .project-img img {
+    width: 75%;
+    max-width: 750px;
+  }
+
+  /* Wider text block so layout stays balanced */
+  .project .text {
+    flex: 2;
+    max-width: 850px;
+  }
+
+  /* Adjust spacing for the larger images */
+  .project {
+    gap: 55px;
+  }
+}
+
+/* Move the travel poster image slightly to the right on desktop/tablet */
+@media (min-width: 769px) {
+  .travel-poster .project-img img {
+    margin-left: 90px;
+  }
+}
+
+/* Tablet */
 @media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-container {
     max-width: 600px;
     padding: 35px;
   }
+}
 
-  .contact-title {
-    font-size: 2.2rem;
+/* Mobile */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .contact-subtitle {
-    font-size: 1rem;
+  .emma {
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .emma-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 15px;
   }
 }
 
+/* Small Mobile */
 @media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
   .contact-container {
     max-width: 90%;
     padding: 25px 20px;
@@ -557,25 +552,9 @@ h3 {
 
   .contact-subtitle {
     font-size: 0.95rem;
-    margin-bottom: 30px;
-  }
-
-  .form-group label {
-    font-size: 0.95rem;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-
-  .contact-btn {
-    padding: 12px;
-    font-size: 1rem;
   }
 }
+
 
 
 
