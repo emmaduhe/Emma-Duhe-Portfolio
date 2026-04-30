@@ -23,7 +23,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="contact-page">
 
   <nav class="navbar">
     <!-- Logo (left, links home) -->
@@ -39,6 +39,93 @@
       </ul>
     </div>
   </nav>
+
+    <section class="contact-container">
+        <h1 class="contact-title">Get in Touch</h1>
+        <p class="contact-subtitle">
+            I’d love to hear from you! Tell me a little about your project or message. You can also reach out to me by email or phone!
+        </p>
+
+        <form class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project-type" required>
+                    <option value="">Select an option</option>
+                    <option value="commission">Custom Commission</option>
+                    <option value="illustration">Digital Illustration</option>
+                    <option value="branding">Branding / Logo</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget" required>
+                    <option value="">Select a range</option>
+                    <option value="under-100">$0–$100</option>
+                    <option value="100-300">$100–$300</option>
+                    <option value="300-600">$300–$600</option>
+                    <option value="600-1000">$600–$1,000</option>
+                    <option value="1000-plus">$1,000+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline" required>
+                    <option value="">Select a timeline</option>
+                    <option value="asap">ASAP</option>
+                    <option value="1-2-weeks">1–2 weeks</option>
+                    <option value="2-4-weeks">2–4 weeks</option>
+                    <option value="1-2-months">1–2 months</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ref">How did you hear about me?</label>
+                <select id="ref" name="ref">
+                    <option value="">Select an option</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="friend">Friend / Word of Mouth</option>
+                    <option value="website">Found your website</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Upload Reference Image (optional)</label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+    </section>
+
+
 
   <footer class="footer">
     <div class="footer-content">
@@ -57,7 +144,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="js/main.js"></script>
 </body>
 
