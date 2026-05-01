@@ -430,13 +430,7 @@ img {
   color: #ffffff;
 }
 
-/* ---------- RESPONSIVE BREAKPOINTS ---------- */
-
-/* ---------- HOMEPAGE DESKTOP + TABLET FIXES ---------- */
-
-/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (UPDATED SIZE) ---------- */
-
-/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (BIGGER IMAGES) ---------- */
+/* ---------- RESPONSIVE  ---------- */
 @media (min-width: 769px) {
   .project {
     align-items: center;
@@ -457,37 +451,29 @@ img {
     max-width: 800px;
   }
 
-  /* Comfortable spacing between image + text */
   .project {
     gap: 50px;
   }
 }
 
-/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (BIGGER IMAGES EXCEPT TRAVEL POSTER) ---------- */
-
-/* ---------- HOMEPAGE DESKTOP + TABLET FIXES (EVEN BIGGER IMAGES) ---------- */
-
 @media (min-width: 769px) {
 
-  /* Make Tiny Chef + Movie Poster MUCH bigger */
+  
   .project:not(.travel-poster) .project-img img {
     width: 75%;
     max-width: 750px;
   }
 
-  /* Wider text block so layout stays balanced */
   .project .text {
     flex: 2;
     max-width: 850px;
   }
 
-  /* Adjust spacing for the larger images */
   .project {
     gap: 55px;
   }
 }
 
-/* Move the travel poster image slightly to the right on desktop/tablet */
 @media (min-width: 769px) {
   .travel-poster .project-img img {
     margin-left: 90px;
